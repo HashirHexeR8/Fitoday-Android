@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Fitoday</string>
+    <string name="intro_enjoy_string">Get Ahead of Your <![CDATA[ <font color=#EF426F>Fitness Goals</font> <br> ]]> With Smart <![CDATA[<font color=#EF426F>Fitness Devices</font>]]></string>
+    <string name="intro_idk_string">Struggling to keep up with <![CDATA[ <br>your <font color =#EF426F>workout routines</font>]]>?</string>
+    <string name="intro_run_string">Optimize Your<![CDATA[ <font color=#EF426F> Fitness Performance <br></font>]]> With Precise <![CDATA[<font color=#EF426F>Measuring</font>]]> and <![CDATA[<font color=#EF426F>Tracking</font>]]></string>
 </resources>

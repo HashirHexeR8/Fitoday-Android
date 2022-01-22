@@ -1,7 +1,8 @@
-package com.active.fitoday
+package com.active.fitoday.ui.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.active.fitoday.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

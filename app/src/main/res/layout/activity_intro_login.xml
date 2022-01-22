@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.IntroLoginActivity">
+
+    <LinearLayout
+        android:id="@+id/llLogoToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fitoday_toolbar_logo" />
+
+    </LinearLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpIntro"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.49"
+        app:layout_constraintTop_toBottomOf="@id/llLogoToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llPageIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.03"
+        app:layout_constraintTop_toBottomOf="@id/vpIntro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <me.relex.circleindicator.CircleIndicator3
+            android:id="@+id/pageIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            app:ci_drawable_unselected="@drawable/intro_circle_pager_indicator_unselected"
+            app:ci_drawable="@drawable/intro_circle_pager_indicator_selected"
+            app:ci_width="7dp"
+            app:ci_height="7dp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintHeight_percent="0.40"
+        app:layout_constraintTop_toBottomOf="@id/llPageIndicator">
+
+        <RelativeLayout
+            android:id="@+id/rlBtnLoginFacebook"
+            android:layout_width="345dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:background="@drawable/sign_up_with_social_button_drawable">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/login_with_facebook_logo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
+                android:layout_centerInParent="true"
+                android:text="Continue With Facebook"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlBtnLoginGoogle"
+            android:layout_width="345dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:background="@drawable/sign_up_with_social_button_drawable">
+
+            <ImageView
+                android:layout_width="57dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/gmail_logo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
+                android:layout_centerInParent="true"
+                android:text="Continue With Google"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rlBtnLoginEmail"
+            android:layout_width="345dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="10dp"
+            android:elevation="5dp"
+            android:orientation="horizontal"
+            android:background="@drawable/sign_up_with_social_button_drawable">
+
+            <ImageView
+                android:layout_width="57dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/email_logo" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/comfortaa_bold"
+                android:layout_centerInParent="true"
+                android:text="Continue With Email"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/rlBtnLoginFitoday"
+            android:layout_width="150dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="Join Fitoday"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:background="@drawable/transparent_button_background"/>
+    </LinearLayout>
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/logo_splash"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
