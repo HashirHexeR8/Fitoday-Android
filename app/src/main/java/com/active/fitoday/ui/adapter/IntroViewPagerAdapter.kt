@@ -3,7 +3,7 @@ package com.active.fitoday.ui.adapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.active.fitoday.ui.fragments.IntroViewPagerFragment
+import com.active.fitoday.ui.BodyProportionsFragment.IntroViewPagerFragment
 import com.active.fitoday.ui.util.Enum
 
 class IntroViewPagerAdapter(activity: AppCompatActivity) : FragmentStateAdapter(activity) {

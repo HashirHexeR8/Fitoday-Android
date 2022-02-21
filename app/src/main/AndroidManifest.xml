@@ -29,6 +29,36 @@
             android:theme="@style/Theme.Fitoday.NoActionBar">
         </activity>
 
+        <activity
+            android:name=".ui.activity.UserSignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Fitoday.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.HomeDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Fitoday.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.JumpingRopeSetTargetActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Fitoday.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.JumpingRopeModeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Fitoday.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.FreeJumpModeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Fitoday.NoActionBar">
+        </activity>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

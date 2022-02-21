@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/ivDeviceIcon"
+        android:layout_width="65dp"
+        android:layout_height="51dp"
+        android:src="@drawable/ic_smart_weight_device"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/llShopitemSeparator"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/ivDeviceIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/llShopitemSeparator"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="7dp">
+        <TextView
+            android:id="@+id/tvShopDeviceName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fitoday Smart Scale"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:fontFamily="@font/comfortaa_bold"/>
+
+        <TextView
+            android:id="@+id/tvShopDeviceDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="8sp"
+            android:textColor="#727272"
+            android:fontFamily="@font/comfortaa_light"
+            android:layout_marginBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/tvShopDevicePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$13.99"
+            android:textSize="11sp"
+            android:textColor="#EF426F"
+            android:fontFamily="@font/comfortaa_bold"/>
+
+        <TextView
+            android:id="@+id/tvShopDeviceDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$13.99 (20%)"
+            android:textSize="8sp"
+            android:textColor="#727272"
+            android:fontFamily="@font/comfortaa_light"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHOP NOW"
+        android:textColor="#EF426F"
+        android:textSize="13sp"
+        android:fontFamily="@font/comfortaa_bold"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/llShopitemSeparator"/>
+
+    <LinearLayout
+        android:id="@+id/llShopitemSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        android:background="#40001F3F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

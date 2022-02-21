@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#001F3F">
+
+    <RelativeLayout
+        android:id="@+id/rlFreeJumpModeTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ibFreeJumpModeTopBarBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:background="@null"
+            android:src="@drawable/back_button_white_icon" />
+
+        <ImageView
+            android:id="@+id/ivSmartRope"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/ibFreeJumpModeTopBarBack"
+            android:src="@drawable/smart_rope_icon_white" />
+
+        <TextView
+            android:id="@+id/tvSmartRopeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/ivSmartRope"
+            android:fontFamily="@font/comfortaa_bold"
+            android:text="Smart Jump Rope"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ibFreeJumpModeSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:background="@null"
+            android:src="@drawable/settings_button_white_icon" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvFreeJumpModeTargetCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="120"
+        android:textSize="93sp"
+        android:textColor="@color/white"
+        app:layout_constraintVertical_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rlFreeJumpModeTopBar"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clFreeJumpModeWorkoutTracker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvFreeJumpModeTargetCounter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="30dp">
+
+        <LinearLayout
+            android:id="@+id/llFreeJumpModeCalorieTracker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tvFreeJumpModeCaloriesBurned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="120"
+                    android:textSize="17sp"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:layout_marginStart="20dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/tvSmartRopeCaloriesBurnedText"
+                    app:layout_constraintBottom_toTopOf="@id/tvSmartRopeCaloriesBurnedText" />
+
+                <TextView
+                    android:id="@+id/tvFreeJumpModeCalorieUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kcal"
+                    android:textSize="10sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/comfortaa_bold"
+                    app:layout_constraintStart_toEndOf="@id/tvSmartRopeCaloriesBurned"
+                    app:layout_constraintBottom_toTopOf="@id/tvSmartRopeCaloriesBurnedText"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginBottom="3dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calories Burned"
+                android:textSize="10sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/comfortaa_bold"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFreeJumpTimeTrackerContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/tvFreeJumpModeTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:30"
+                android:textSize="17sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/comfortaa_bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Time"
+                android:textSize="10sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/comfortaa_bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llFreeJumpModeJumpTracker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/tvFreeJumpModeTotalJumps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:30"
+                android:textSize="17sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/comfortaa_bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Time"
+                android:textSize="10sp"
+                android:textColor="#FFFFFF"
+                android:fontFamily="@font/comfortaa_bold"
+                android:layout_marginBottom="20dp"/>
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

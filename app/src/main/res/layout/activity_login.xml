@@ -20,8 +20,9 @@
 
     <EditText
         android:id="@+id/edEmail"
-        android:layout_width="345dp"
+        android:layout_width="match_parent"
         android:layout_height="57dp"
+        app:layout_constraintWidth_max="345dp"
         android:paddingStart="20dp"
         android:hint="Email"
         android:fontFamily="@font/comfortaa_bold"
@@ -30,14 +31,17 @@
         android:textColor="@color/white"
         android:background="@drawable/login_text_field_background_drawable"
         android:layout_marginTop="80dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
         app:layout_constraintTop_toBottomOf="@id/tvLetsGetStarted"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
         android:id="@+id/edPassword"
-        android:layout_width="345dp"
+        android:layout_width="match_parent"
         android:layout_height="57dp"
+        app:layout_constraintWidth_max="345dp"
         android:paddingStart="20dp"
         android:hint="Password"
         android:textSize="16sp"
@@ -45,9 +49,74 @@
         android:textColor="@color/white"
         android:background="@drawable/login_text_field_background_drawable"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginStart="23dp"
         app:layout_constraintTop_toBottomOf="@id/edEmail"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/llPrivacyPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edPassword">
+        <CheckBox
+            android:id="@+id/cbPolicy"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:button="@drawable/policy_checkbox_background_drawable" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I agree to the Fitody Terms of Service. Please also read the Privacy Policy. Including the Cookies Use. Statement"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/comfortaa_bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/cbPolicy"
+            app:layout_constraintTop_toBottomOf="@id/edPassword"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llUpdatesPolicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/llPrivacyPolicy">
+        <CheckBox
+            android:id="@+id/cbUpdatesPolicy"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:button="@drawable/policy_checkbox_background_drawable" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Keep me updated about the Fitoday Products, news and promotions"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/comfortaa_bold"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toEndOf="@id/cbPolicy"
+            app:layout_constraintTop_toBottomOf="@id/edPassword"/>
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/tvForgetPassword"
@@ -58,7 +127,7 @@
         android:textColor="@color/white"
         android:text="Forget Password?"
         android:layout_marginTop="44dp"
-        app:layout_constraintTop_toBottomOf="@id/edPassword"
+        app:layout_constraintTop_toBottomOf="@id/llUpdatesPolicy"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

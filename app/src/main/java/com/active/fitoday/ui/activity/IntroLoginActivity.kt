@@ -44,6 +44,7 @@ class IntroLoginActivity : AppCompatActivity() {
 
         binding.rlBtnLoginFitoday .setOnClickListener {
             val intent: Intent = Intent (this@IntroLoginActivity, LoginActivity::class.java)
+            intent.putExtra("isJoinFitoday", true)
             startActivity(intent)
         }
 

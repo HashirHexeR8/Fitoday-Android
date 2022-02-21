@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ibWeightPickBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button_arrow"
+            android:background="@null"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"/>
+
+        <TextView
+            android:id="@+id/tvWeightPickerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="374dp"
+            android:text="What is your current weight?"
+            android:textSize="24sp"
+            android:textColor="#001F3F"
+            android:fontFamily="@font/comfortaa_bold"
+            app:layout_constraintTop_toBottomOf="@id/ibWeightPickBack"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"/>
+
+        <LinearLayout
+            android:id="@+id/llPickerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintTop_toBottomOf="@id/tvWeightPickerTitle"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="40dp">
+            <com.shawnlin.numberpicker.NumberPicker
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_weight="1"
+                app:np_textSize="16sp"
+                app:np_selectedTextSize="16sp"
+                app:np_value="61"
+                app:np_max="100"
+                app:np_min="1"
+                app:np_wheelItemCount="9"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_weight="1"
+                app:np_wheelItemCount="9"
+                app:np_textSize="16sp"
+                app:np_selectedTextSize="16sp"
+                app:np_min="1"
+                app:np_value="5"
+                app:np_max="9"/>
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_weight="1"
+                app:np_textSize="16sp"
+                app:np_selectedTextSize="16sp"
+                app:np_min="1"
+                app:np_max="2"
+                app:np_itemSpacing="-110dp"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnWeightPickerConfirm"
+            android:layout_width="133dp"
+            android:layout_height="35dp"
+            android:text="Confirm"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:fontFamily="@font/comfortaa_bold"
+            android:background="@drawable/sign_up_with_social_button_drawable"
+            app:layout_constraintTop_toBottomOf="@id/llPickerContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"/>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
