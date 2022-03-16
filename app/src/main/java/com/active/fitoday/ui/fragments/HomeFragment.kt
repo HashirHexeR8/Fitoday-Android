@@ -12,6 +12,7 @@ import com.active.fitoday.ui.fragments.BodyProportionsFragment
 import com.active.fitoday.ui.fragments.NotificationsFragment
 import com.active.fitoday.ui.fragments.SettingsFragment
 import com.active.fitoday.ui.fragments.WeightManagementFragment
+import com.bumptech.glide.Glide
 
 class HomeFragment: Fragment() {
 
@@ -23,6 +24,9 @@ class HomeFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Glide.with(this).load(resources.getDrawable(R.drawable.ic_default_profile_placeholder)).placeholder(R.drawable.ic_default_profile_placeholder).into(binding.ivHomeUserProfile)
+
         val itemView1 = LayoutListItemBinding.inflate(layoutInflater, binding.llItemContainer, false)
         itemView1.tvItemText.text = "Weight"
         itemView1.tvItemValue.text = "86kg"
@@ -33,7 +37,7 @@ class HomeFragment: Fragment() {
             fragmentTransaction.add(R.id.tabFragmentContainer, WeightManagementFragment(), "WeightManagementFragment").addToBackStack("HomeFragment").commit()
         }
         val itemView2 = LayoutListItemBinding.inflate(layoutInflater, binding.llItemContainer, false)
-        itemView2.tvItemText.text = "Proportions"
+        itemView2.tvItemText.text = "Body Proportions"
         itemView2.tvItemValue.text = "2/Aug/2021"
         itemView2.ivItemIcon.setImageDrawable(resources.getDrawable(R.drawable.ic_home_proportions))
         binding.llItemContainer.addView(itemView2.root)
@@ -46,21 +50,11 @@ class HomeFragment: Fragment() {
         itemView3.tvItemValue.text = "2/Aug/2021"
         itemView3.ivItemIcon.setImageDrawable(resources.getDrawable(R.drawable.ic_home_exercise))
         binding.llItemContainer.addView(itemView3.root)
-        val itemView4 = LayoutListItemBinding.inflate(layoutInflater, binding.llItemContainer, false)
-        itemView4.tvItemText.text = "Heart Rate"
-        itemView4.tvItemValue.text = "55"
-        itemView4.ivItemIcon.setImageDrawable(resources.getDrawable(R.drawable.ic_home_heart_rate))
-        binding.llItemContainer.addView(itemView4.root)
         val itemView5 = LayoutListItemBinding.inflate(layoutInflater, binding.llItemContainer, false)
         itemView5.tvItemText.text = "Sleep"
         itemView5.tvItemValue.text = "7 hr 15 Min"
         itemView5.ivItemIcon.setImageDrawable(resources.getDrawable(R.drawable.ic_home_sleep))
         binding.llItemContainer.addView(itemView5.root)
-        val itemView6 = LayoutListItemBinding.inflate(layoutInflater, binding.llItemContainer, false)
-        itemView6.tvItemText.text = "Blood Pressure"
-        itemView6.tvItemValue.text = "120/80"
-        itemView5.ivItemIcon.setImageDrawable(resources.getDrawable(R.drawable.ic_home_heart_rate))
-        binding.llItemContainer.addView(itemView6.root)
 
         binding.ibNotifButton.setOnClickListener {
             val fragmentTransaction = parentFragmentManager.beginTransaction()
@@ -70,6 +64,10 @@ class HomeFragment: Fragment() {
         binding.btnHomeSettingsButton.setOnClickListener {
             val fragmentTransaction = parentFragmentManager.beginTransaction()
             fragmentTransaction.add(R.id.tabFragmentContainer, SettingsFragment(), "SettingsFragment").addToBackStack("HomeFragment").commit()
+        }
+
+        binding.ivHomeUserProfile.setOnClickListener {
+
         }
 
     }

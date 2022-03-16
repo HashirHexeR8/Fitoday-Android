@@ -7,7 +7,7 @@ class DevicesItemInfoDTO {
         this.deviceName = deviceName
         this.deviceDescription = deviceDescription
         this.devicePrice = devicePrice
-        this.deviceDiscount = deviceDescription
+        this.deviceDiscount = deviceDiscount
     }
 
     constructor() {

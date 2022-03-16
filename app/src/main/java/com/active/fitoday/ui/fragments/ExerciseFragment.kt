@@ -34,7 +34,7 @@ class ExerciseFragment: Fragment() {
         itemView3.ivItemIcon.setImageDrawable(resources.getDrawable(R.drawable.ic_exercise_cycling))
         binding.llExerciseListItemContainer.addView(itemView3.root)
         val itemView4 = LayoutListItemBinding.inflate(layoutInflater, binding.llExerciseListItemContainer, false)
-        itemView4.tvItemText.text = "Jumping Ropes"
+        itemView4.tvItemText.text = "Jumping Rope"
         itemView4.tvItemValue.text = "52 Miles"
         itemView4.ivItemIcon.setImageDrawable(resources.getDrawable(R.drawable.ic_exercise_jump_rope))
         binding.llExerciseListItemContainer.addView(itemView4.root)

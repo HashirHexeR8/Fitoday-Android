@@ -11,6 +11,7 @@ import com.active.fitoday.R
 import com.active.fitoday.databinding.FragmentProfileBinding
 import com.active.fitoday.databinding.LayoutProfileRowItemBinding
 import com.active.fitoday.ui.model.ProfileItemInfoDTO
+import com.bumptech.glide.Glide
 
 class ProfileFragment: Fragment() {
 
@@ -23,6 +24,9 @@ class ProfileFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        Glide.with(this).load(resources.getDrawable(R.drawable.ic_default_profile_placeholder)).placeholder(R.drawable.ic_default_profile_placeholder).into(binding.ivPofilePageIcon)
+
         val itemsDataSource = ArrayList<ProfileItemInfoDTO>()
         itemsDataSource.add(ProfileItemInfoDTO("About You", "Gender", "Female", "Birthday", "Sep, 4, 1990", R.drawable.ic_profile_gender, R.drawable.ic_profile_birthday, true, false, true))
         itemsDataSource.add(ProfileItemInfoDTO("", "Weight", "105 lb", "Height", "5.6 ft", R.drawable.ic_profile_info_weight, R.drawable.ic_profile_info_height, true, true, false))

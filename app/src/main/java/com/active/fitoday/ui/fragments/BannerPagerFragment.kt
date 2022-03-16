@@ -23,6 +23,7 @@ class BannerPagerFragment(deviceItemInfo: DevicesItemInfoDTO) : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        binding.ivShopDeviceBannerIcon.setImageDrawable(resources.getDrawable(mDeviceInfo.deviceIcon ?: R.drawable.ic_smart_weight_device))
         binding.tvShopDeviceBannerName.text = mDeviceInfo.deviceName
         binding.tvShopBannerDescription.text = mDeviceInfo.deviceDescription
     }

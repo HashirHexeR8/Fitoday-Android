@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="65dp"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
     android:background="@drawable/exercise_bottom_tab_background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
@@ -19,7 +20,7 @@
         android:layout_height="wrap_content"
         android:text="Exercise"
         android:textSize="8sp"
-        android:textColor="#DADADA"
+        android:textColor="@drawable/bottom_nav_text_color_selector"
         android:fontFamily="@font/comfortaa_light"
         app:layout_constraintTop_toBottomOf="@id/ivBottomNavHome"
         app:layout_constraintStart_toStartOf="parent"

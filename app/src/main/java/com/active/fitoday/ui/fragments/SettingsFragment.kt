@@ -36,8 +36,8 @@ class SettingsFragment: Fragment(), SettingsListRecyclerViewAdapter.ItemClickLis
         dataSource.add(settingsListItemDTO(Enum.settingsItemsType.listItem, "Units"))
         dataSource.add(settingsListItemDTO(Enum.settingsItemsType.listItem, "Privacy and Legal Terms"))
         dataSource.add(settingsListItemDTO(Enum.settingsItemsType.listItem, "Help"))
-        dataSource.add(settingsListItemDTO(Enum.settingsItemsType.listItem, "Rate Fitoday"))
-        dataSource.add(settingsListItemDTO(Enum.settingsItemsType.shopButtonItem, "Shop Fitoday"))
+        dataSource.add(settingsListItemDTO(Enum.settingsItemsType.listItem, "Rate Fitody"))
+        dataSource.add(settingsListItemDTO(Enum.settingsItemsType.shopButtonItem, "Shop Fitody"))
         dataSource.add(settingsListItemDTO(Enum.settingsItemsType.logoutButtonItem, "Logout"))
 
         val listAdapter = SettingsListRecyclerViewAdapter(this)

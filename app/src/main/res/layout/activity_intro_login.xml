@@ -147,7 +147,7 @@
             android:layout_marginTop="10dp"
             android:textAlignment="center"
             android:fontFamily="@font/comfortaa_bold"
-            android:text="Join Fitoday"
+            android:text="Join Fitody"
             android:textSize="16sp"
             android:textAllCaps="false"
             android:textColor="@color/black"

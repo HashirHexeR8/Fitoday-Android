@@ -68,12 +68,13 @@
             <lecho.lib.hellocharts.view.LineChartView
                 android:id="@+id/weightGraphView"
                 android:layout_width="0dp"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 app:layout_constraintWidth_percent="0.89"
                 android:layout_marginTop="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rlExerciseTopBar"
+                app:layout_constraintBottom_toBottomOf="parent"
                 />
 
 
