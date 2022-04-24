@@ -77,7 +77,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="I agree to the Fitody Terms of Service. Please also read the Privacy Policy. Including the Cookies Use. Statement"
+            android:text="I agree to the Fitody terms and conditions, and I consent to Fitody processing my personal data, including Body Metrics data"
             android:textSize="12sp"
             android:textColor="@color/white"
             android:fontFamily="@font/comfortaa_bold"
@@ -109,7 +109,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Keep me updated about the Fitoday Products, news and promotions"
+            android:text="I consent to receiving sales and marketing communication from Fitody"
             android:textSize="12sp"
             android:textColor="@color/white"
             android:fontFamily="@font/comfortaa_bold"

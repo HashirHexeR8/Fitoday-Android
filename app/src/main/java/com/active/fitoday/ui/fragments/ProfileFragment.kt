@@ -25,7 +25,7 @@ class ProfileFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Glide.with(this).load(resources.getDrawable(R.drawable.ic_default_profile_placeholder)).placeholder(R.drawable.ic_default_profile_placeholder).into(binding.ivPofilePageIcon)
+        Glide.with(this).load(resources.getDrawable(R.drawable.profile_picture_place_holder)).placeholder(R.drawable.profile_picture_place_holder).into(binding.ivPofilePageIcon)
 
         val itemsDataSource = ArrayList<ProfileItemInfoDTO>()
         itemsDataSource.add(ProfileItemInfoDTO("About You", "Gender", "Female", "Birthday", "Sep, 4, 1990", R.drawable.ic_profile_gender, R.drawable.ic_profile_birthday, true, false, true))

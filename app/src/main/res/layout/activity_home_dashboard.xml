@@ -15,14 +15,15 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/bottomTabLayout"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
+        android:elevation="20dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/bottom_nav_background_drawable"
+        android:background="@color/white"
         app:tabIndicator="@null"
         app:tabIndicatorHeight="0dp"
-        app:tabPaddingTop="-1dp"
         app:tabPaddingEnd="-1dp"
         app:tabPaddingStart="-1dp"
+        app:tabPaddingTop="-1dp"
         app:tabRippleColor="@null" />
 
 

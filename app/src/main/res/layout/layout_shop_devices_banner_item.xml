@@ -7,12 +7,12 @@
 
     <ImageView
         android:id="@+id/ivShopDeviceBannerIcon"
-        android:layout_width="148dp"
-        android:layout_height="0dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         app:layout_constraintHeight_percent="0.7"
         android:src="@drawable/ic_smart_weight_device"
         android:layout_margin="20dp"
-        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

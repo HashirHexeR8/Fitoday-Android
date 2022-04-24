@@ -1,11 +1,13 @@
 package com.active.fitoday.ui.fragments
 
 import android.os.Bundle
+import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
@@ -15,8 +17,8 @@ import com.active.fitoday.databinding.MyDeviceRecyclerViewItemBinding
 import com.active.fitoday.databinding.ShopDeviceRecyclerViewItemBinding
 import com.active.fitoday.ui.BodyProportionsFragment.BannerPagerFragment
 import com.active.fitoday.ui.model.DevicesItemInfoDTO
-import com.active.fitoday.ui.model.settingsListItemDTO
 import com.active.fitoday.ui.util.Enum
+
 
 class DevicesFragment: Fragment() {
 
@@ -29,17 +31,20 @@ class DevicesFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.rvUserDevices.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        val connectedDeviceRecyclerViewAdapter = DevicesFragmentRecyclerViewAdapter(Enum.shopDevicesListType.myDevicesList)
+        val displayMetrics = DisplayMetrics()
+        activity?.getWindowManager()?.getDefaultDisplay()?.getMetrics(displayMetrics)
+        val screenWidth = displayMetrics.widthPixels
+        val width = screenWidth / 3
+        binding.rvUserDevices.layoutManager = GridLayoutManager(context, 1, GridLayoutManager.HORIZONTAL, false)
+        val connectedDeviceRecyclerViewAdapter = DevicesFragmentRecyclerViewAdapter(Enum.shopDevicesListType.myDevicesList, width)
         binding.rvUserDevices.adapter = connectedDeviceRecyclerViewAdapter
         binding.rvShopDevices.layoutManager = LinearLayoutManager(context)
-        val shopDeviceRecyclerViewAdapter = DevicesFragmentRecyclerViewAdapter(Enum.shopDevicesListType.shopDevicesList)
+        val shopDeviceRecyclerViewAdapter = DevicesFragmentRecyclerViewAdapter(Enum.shopDevicesListType.shopDevicesList, 0)
         binding.rvShopDevices.adapter = shopDeviceRecyclerViewAdapter
         val dataSource = ArrayList<DevicesItemInfoDTO>()
         dataSource.add(DevicesItemInfoDTO(R.drawable.ic_smart_weight_device, "Fitody Smart Scale", "Full Body Composition Including Body Fat, BMI, Water Percentage, Muscle & Bone Mass", "$13.99", "20% off"))
-        dataSource.add(DevicesItemInfoDTO(R.drawable.ic_smart_jump_rope, "Fitody Smart Tape", "Optimize Your Fitness Performance With Precise Measuring & Tracking", "$13.99", "20% off"))
-        dataSource.add(DevicesItemInfoDTO(R.drawable.ic_smart_tape, "Fitody Smart Rope", "Optimize Your Fitness Performance With Precise Measuring & Tracking", "$13.99", "20% off"))
-        dataSource.add(DevicesItemInfoDTO(R.drawable.ic_smart_weight_device, "Fitody Smart BMI", "Optimize Your Fitness Performance With Precise Measuring & Tracking", "$13.99", "20% off"))
+        dataSource.add(DevicesItemInfoDTO(R.drawable.ic_smart_tape, "Fitody Smart Tape", "Optimize Your Fitness Performance With Precise Measuring & Tracking", "$13.99", "20% off"))
+        dataSource.add(DevicesItemInfoDTO(R.drawable.ic_smart_jump_rope, "Fitody Smart Rope", "Optimize Your Fitness Performance With Precise Measuring & Tracking", "$13.99", "20% off"))
         shopDeviceRecyclerViewAdapter.setDataSource(dataSource)
         connectedDeviceRecyclerViewAdapter.setDataSource(dataSource)
         val adapter = DeviceBannerViewPagerAdapter(activity as AppCompatActivity, dataSource)
@@ -50,10 +55,11 @@ class DevicesFragment: Fragment() {
     }
 }
 
-class DevicesFragmentRecyclerViewAdapter(itemType: Enum.shopDevicesListType): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class DevicesFragmentRecyclerViewAdapter(itemType: Enum.shopDevicesListType, width: Int): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     val mItemType = itemType
     var mItemsDataSource = ArrayList<DevicesItemInfoDTO>()
+    val mWidth = width
 
     public fun setDataSource(itemsList: ArrayList<DevicesItemInfoDTO>)
     {
@@ -86,13 +92,15 @@ class DevicesFragmentRecyclerViewAdapter(itemType: Enum.shopDevicesListType): Re
         return mItemsDataSource.size
     }
 
-}
+    inner class MyDevicesItemViewHolder(val itemViewBinding: MyDeviceRecyclerViewItemBinding): RecyclerView.ViewHolder(itemViewBinding.root) {
 
-class MyDevicesItemViewHolder(val itemViewBinding: MyDeviceRecyclerViewItemBinding): RecyclerView.ViewHolder(itemViewBinding.root) {
+        fun bindItemInfo(itemInfo: DevicesItemInfoDTO)
+        {
+            itemViewBinding.root.layoutParams.height = mWidth
+            itemViewBinding.root.layoutParams.width = mWidth
+            itemViewBinding.ivUserDeviceIcon.setImageDrawable(itemViewBinding.root.resources.getDrawable(itemInfo.deviceIcon ?: R.drawable.ic_smart_weight_device))
+        }
 
-    fun bindItemInfo(itemInfo: DevicesItemInfoDTO)
-    {
-        itemViewBinding.ivUserDeviceIcon.setImageDrawable(itemViewBinding.root.resources.getDrawable(itemInfo.deviceIcon ?: R.drawable.ic_smart_weight_device))
     }
 
 }

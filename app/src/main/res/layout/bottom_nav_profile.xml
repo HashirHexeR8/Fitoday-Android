@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="10dp"
-    android:background="@drawable/exercise_bottom_tab_background"
+    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -19,9 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profile"
-        android:textSize="8sp"
+        android:textSize="9sp"
         android:textColor="@drawable/bottom_nav_text_color_selector"
-        android:fontFamily="@font/comfortaa_light"
+        android:fontFamily="@font/comfortaa_bold"
         app:layout_constraintTop_toBottomOf="@id/ivBottomNavHome"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>

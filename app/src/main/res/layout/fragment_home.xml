@@ -28,7 +28,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:scaleType="fitCenter"
-                android:src="@drawable/dummy_profile_picture" />
+                android:src="@drawable/profile_picture_place_holder" />
 
             <ImageView
                 android:layout_width="wrap_content"

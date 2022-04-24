@@ -31,12 +31,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
+                android:layout_marginStart="30dp"
                 android:layout_toEndOf="@id/ibProportionsBack"
                 android:fontFamily="@font/comfortaa_bold"
-                android:text="Proportions"
+                android:text="Body Proportions"
                 android:textColor="#001F3F"
-                android:textSize="20sp"
-                android:layout_marginStart="30dp"/>
+                android:textSize="20sp" />
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/ibProportionsSettings"
@@ -111,7 +111,7 @@
             android:id="@+id/ivSmartTapeIcon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_shop_smart_jump_rope"
+            android:src="@drawable/ic_smart_tape"
             app:layout_constraintTop_toBottomOf="@id/llBodyProportionsSeparator"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

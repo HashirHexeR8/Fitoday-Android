@@ -27,7 +27,7 @@
             android:id="@+id/tvShopDeviceName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fitoday Smart Scale"
+            android:text="Fitody Smart Scale"
             android:textColor="@color/black"
             android:textSize="11sp"
             android:fontFamily="@font/comfortaa_bold"/>

@@ -25,7 +25,7 @@ class HomeFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Glide.with(this).load(resources.getDrawable(R.drawable.ic_default_profile_placeholder)).placeholder(R.drawable.ic_default_profile_placeholder).into(binding.ivHomeUserProfile)
+        Glide.with(this).load(resources.getDrawable(R.drawable.profile_picture_place_holder)).placeholder(R.drawable.profile_picture_place_holder).into(binding.ivHomeUserProfile)
 
         val itemView1 = LayoutListItemBinding.inflate(layoutInflater, binding.llItemContainer, false)
         itemView1.tvItemText.text = "Weight"

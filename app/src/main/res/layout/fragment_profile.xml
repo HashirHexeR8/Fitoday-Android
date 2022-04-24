@@ -45,7 +45,8 @@
             android:layout_height="135dp"
             android:layout_centerInParent="true"
             android:layout_marginTop="10dp"
-            android:src="@drawable/ic_default_profile_placeholder"/>
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile_picture_place_holder" />
 
         <ImageButton
             android:layout_width="32dp"

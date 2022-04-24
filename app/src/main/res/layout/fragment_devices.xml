@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:fontFamily="@font/comfortaa_bold"
-            android:text="Devices"
+            android:text="Device"
             android:textColor="#001F3F"
             android:textSize="20sp" />
 
@@ -118,7 +118,7 @@
         android:id="@+id/tvPopularDevices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Devices"
+        android:text="Popular Devices"
         android:textSize="14sp"
         android:textColor="#001F3F"
         android:fontFamily="@font/comfortaa_bold"
