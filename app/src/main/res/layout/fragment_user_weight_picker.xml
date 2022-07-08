@@ -45,6 +45,7 @@
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp">
             <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/npWeightPicker"
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
                 android:layout_weight="1"
@@ -56,6 +57,7 @@
                 app:np_wheelItemCount="9"/>
 
             <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/npWeightDecimalValuePicker"
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
                 android:layout_weight="1"
@@ -67,6 +69,7 @@
                 app:np_max="9"/>
 
             <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/npUnitPicker"
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
                 android:layout_weight="1"

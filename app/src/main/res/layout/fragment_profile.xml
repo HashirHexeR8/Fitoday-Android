@@ -49,6 +49,7 @@
             android:src="@drawable/profile_picture_place_holder" />
 
         <ImageButton
+            android:id="@+id/ibCaptureProfilePicture"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_alignParentEnd="true"

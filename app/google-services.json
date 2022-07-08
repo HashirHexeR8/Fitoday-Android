@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1066144227645",
+    "project_id": "fitody-dev",
+    "storage_bucket": "fitody-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066144227645:android:a237529cfa38bcfc7ce554",
+        "android_client_info": {
+          "package_name": "com.active.fitody"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1066144227645-s2islr738l3t97gaf07jdi0af7vketbb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.active.fitody",
+            "certificate_hash": "7049bbe794ddd855bad960d5377287904f2d9e1d"
+          }
+        },
+        {
+          "client_id": "1066144227645-qkgb2c02727fspdgjk03mtqpa3cm4jbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdTisDgnq3qXmD3-Rwz9rsrRvK944uahA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1066144227645-qkgb2c02727fspdgjk03mtqpa3cm4jbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

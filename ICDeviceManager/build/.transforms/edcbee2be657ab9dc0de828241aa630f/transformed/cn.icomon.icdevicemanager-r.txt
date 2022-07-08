@@ -1,0 +1,2 @@
+cn.icomon.icdevicemanager
+string app_name

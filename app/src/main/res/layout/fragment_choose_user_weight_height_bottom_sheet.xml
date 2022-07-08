@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/rlTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llPickerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintTop_toBottomOf="@id/rlTopBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp">
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/npWeightPicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:np_textSize="16sp"
+            app:np_selectedTextSize="16sp"
+            app:np_value="61"
+            app:np_max="130"
+            app:np_min="1"
+            app:np_wheelItemCount="9"/>
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/npWeightDecimalValuePicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:np_wheelItemCount="9"
+            app:np_textSize="16sp"
+            app:np_selectedTextSize="16sp"
+            app:np_min="0"
+            app:np_value="5"
+            app:np_max="9"/>
+
+        <com.shawnlin.numberpicker.NumberPicker
+            android:id="@+id/npUnitPicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:np_textSize="16sp"
+            app:np_selectedTextSize="16sp"
+            app:np_min="1"
+            app:np_max="2"
+            app:np_itemSpacing="-110dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.active.fitoday">
+    package="com.active.fitody">
 
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
     <application
-        android:name=".ui.FitodayApplication"
+        android:name="com.active.fitody.FitodyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,52 +18,82 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fitoday">
         <activity
-            android:name=".ui.activity.IntroLoginActivity"
+            android:name="com.active.fitody.ui.activity.IntroLoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/splashScreenTheme">
+        </activity>
+        <activity
+            android:name="com.active.fitody.ui.activity.MainActivity"
             android:exported="true"
+            android:screenOrientation="portrait"
             android:theme="@style/splashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ui.activity.MainActivity"
-            android:exported="false">
-        </activity>
 
         <activity
-            android:name=".ui.activity.LoginActivity"
+            android:name="com.active.fitody.ui.activity.LoginActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Fitoday.NoActionBar">
         </activity>
 
         <activity
-            android:name=".ui.activity.UserSignUpActivity"
+            android:name="com.active.fitody.ui.activity.UserSignUpActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Fitoday.NoActionBar">
         </activity>
 
         <activity
-            android:name=".ui.activity.HomeDashboardActivity"
+            android:name="com.active.fitody.ui.activity.HomeDashboardActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Fitoday.NoActionBar">
         </activity>
 
         <activity
-            android:name=".ui.activity.JumpingRopeSetTargetActivity"
+            android:name="com.active.fitody.ui.activity.JumpingRopeSetTargetActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Fitoday.NoActionBar">
         </activity>
 
         <activity
-            android:name=".ui.activity.JumpingRopeModeActivity"
+            android:name="com.active.fitody.ui.activity.JumpingRopeModeActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Fitoday.NoActionBar">
         </activity>
 
         <activity
-            android:name=".ui.activity.FreeJumpModeActivity"
+            android:name="com.active.fitody.ui.activity.FreeJumpModeActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Fitoday.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="com.active.fitody.ui.activity.ConnectDeviceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Fitoday.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="com.active.fitody.ui.activity.SkipRopeTimerModeActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Fitoday.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="com.active.fitody.ui.activity.UserWeightTargetActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
             android:theme="@style/Theme.Fitoday.NoActionBar">
         </activity>
 

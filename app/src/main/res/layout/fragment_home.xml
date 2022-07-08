@@ -1,226 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:scrollbars="none"
-    android:background="@color/white"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical"
+    android:background="@color/white">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/rlHomeToolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
 
-        <RelativeLayout
-            android:id="@+id/rlHomeToolbar"
+        <ImageView
+            android:id="@+id/ivHomeUserProfile"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile_picture_place_holder" />
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="15dp"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp">
+            android:layout_centerInParent="true"
+            android:src="@drawable/app_icon_toolbar" />
 
-            <ImageView
-                android:id="@+id/ivHomeUserProfile"
-                android:layout_width="38dp"
-                android:layout_height="38dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:scaleType="fitCenter"
-                android:src="@drawable/profile_picture_place_holder" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnHomeSettingsButton"
+            android:layout_width="28dp"
+            android:layout_height="29dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="40dp"
+            android:layout_toStartOf="@id/ibNotifButton"
+            android:background="@null"
+            android:src="@drawable/settings_icon" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:src="@drawable/app_icon_toolbar" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/ibNotifButton"
+            android:layout_width="34dp"
+            android:layout_height="29dp"
+            android:src="@drawable/notif_button_icon"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/btnHomeSettingsButton"
-                android:layout_width="28dp"
-                android:layout_height="29dp"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="40dp"
-                android:layout_toStartOf="@id/ibNotifButton"
-                android:background="@null"
-                android:src="@drawable/settings_icon" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/ibNotifButton"
-                android:layout_width="34dp"
-                android:layout_height="29dp"
-                android:src="@drawable/notif_button_icon"
-                android:background="@null"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/homeWidgetContainer"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/rlHomeToolbar"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Today"
-                android:textSize="24sp"
-                android:textColor="#EF426F"
-                android:fontFamily="@font/comfortaa_bold"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="10dp"/>
+            android:layout_height="wrap_content">
 
             <RelativeLayout
-                android:id="@+id/rlCaloriesWidget"
-                android:layout_width="wrap_content"
+                android:id="@+id/homeWidgetContainer"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today"
+                    android:textSize="24sp"
+                    android:textColor="#EF426F"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlCaloriesWidget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+                    <LinearLayout
+                        android:layout_width="148dp"
+                        android:layout_height="148dp"
+                        android:layout_centerInParent="true"
+                        android:elevation="10dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="@drawable/circle_drawable">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/calories_burning_icon"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1125 Cal"
+                            android:textSize="16sp"
+                            android:textColor="#001F3F"
+                            android:fontFamily="@font/comfortaa_light"/>
+                    </LinearLayout>
+
+                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                        android:id="@+id/caloriesProgress"
+                        android:layout_width="185dp"
+                        android:layout_height="185dp"
+                        android:layout_centerInParent="true"
+                        app:cpb_background_progressbar_color="#00b6bbd8"
+                        app:cpb_background_progressbar_width="5dp"
+                        app:cpb_progress="40"
+                        app:cpb_progress_direction="to_right"
+                        app:cpb_progressbar_color="#001F3F"
+                        app:cpb_progressbar_width="9dp"
+                        app:cpb_round_border="true" />
+                </RelativeLayout>
+
                 <LinearLayout
-                    android:layout_width="148dp"
-                    android:layout_height="148dp"
-                    android:layout_centerInParent="true"
-                    android:elevation="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:background="@drawable/circle_drawable">
-                    <ImageView
+                    android:layout_below="@+id/rlCaloriesWidget"
+                    android:layout_toEndOf="@id/rlCaloriesWidget"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginStart="15dp">
+                    <RelativeLayout
+                        android:id="@+id/rlStepsProgressWidget"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/calories_burning_icon"/>
+                        android:layout_height="wrap_content">
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/stepProgressBar"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_centerInParent="true"
+                            app:cpb_background_progressbar_color="#8BC4FF"
+                            app:cpb_background_progressbar_width="5dp"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progressbar_color="#001F3F"
+                            app:cpb_progressbar_width="4dp"
+                            app:cpb_progress="45"
+                            app:cpb_round_border="true" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/steps_widget_icon" />
+                    </RelativeLayout>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1125 Cal"
+                        android:text="1258"
                         android:textSize="16sp"
                         android:textColor="#001F3F"
-                        android:fontFamily="@font/comfortaa_light"/>
+                        android:fontFamily="@font/comfortaa"
+                        android:layout_marginTop="3dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Steps"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/comfortaa"/>
                 </LinearLayout>
 
-                <com.mikhaellopez.circularprogressbar.CircularProgressBar
-                    android:id="@+id/caloriesProgress"
-                    android:layout_width="185dp"
-                    android:layout_height="185dp"
-                    android:layout_centerInParent="true"
-                    app:cpb_background_progressbar_color="#00b6bbd8"
-                    app:cpb_background_progressbar_width="5dp"
-                    app:cpb_progress="40"
-                    app:cpb_progress_direction="to_right"
-                    app:cpb_progressbar_color="#001F3F"
-                    app:cpb_progressbar_width="9dp"
-                    app:cpb_round_border="true" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_below="@+id/rlCaloriesWidget"
+                    android:layout_toStartOf="@id/rlCaloriesWidget"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="15dp">
+                    <RelativeLayout
+                        android:id="@+id/rlMilesProgressWidget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/milesProgressBar"
+                            android:layout_width="46dp"
+                            android:layout_height="46dp"
+                            android:layout_centerInParent="true"
+                            app:cpb_background_progressbar_color="#8BC4FF"
+                            app:cpb_background_progressbar_width="5dp"
+                            app:cpb_progress="45"
+                            app:cpb_progress_direction="to_right"
+                            app:cpb_progressbar_color="#001F3F"
+                            app:cpb_progressbar_width="4dp"
+                            app:cpb_round_border="true" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/miles_widget_icon"
+                            android:layout_centerInParent="true"/>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.56"
+                        android:textSize="16sp"
+                        android:textColor="#001F3F"
+                        android:fontFamily="@font/comfortaa"
+                        android:layout_marginTop="3dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Miles"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/comfortaa"/>
+                </LinearLayout>
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/llItemContainer"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:gravity="center"
-                android:layout_below="@+id/rlCaloriesWidget"
-                android:layout_toEndOf="@id/rlCaloriesWidget"
-                android:layout_marginTop="50dp"
-                android:layout_marginStart="15dp">
-                <RelativeLayout
-                    android:id="@+id/rlStepsProgressWidget"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-                        android:id="@+id/stepProgressBar"
-                        android:layout_width="46dp"
-                        android:layout_height="46dp"
-                        android:layout_centerInParent="true"
-                        app:cpb_background_progressbar_color="#8BC4FF"
-                        app:cpb_background_progressbar_width="5dp"
-                        app:cpb_progress_direction="to_right"
-                        app:cpb_progressbar_color="#001F3F"
-                        app:cpb_progressbar_width="4dp"
-                        app:cpb_progress="45"
-                        app:cpb_round_border="true" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:src="@drawable/steps_widget_icon" />
-                </RelativeLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1258"
-                    android:textSize="16sp"
-                    android:textColor="#001F3F"
-                    android:fontFamily="@font/comfortaa"
-                    android:layout_marginTop="3dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Steps"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/comfortaa"/>
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@id/homeWidgetContainer">
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:layout_below="@+id/rlCaloriesWidget"
-                android:layout_toStartOf="@id/rlCaloriesWidget"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="15dp">
-                <RelativeLayout
-                    android:id="@+id/rlMilesProgressWidget"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-                        android:id="@+id/milesProgressBar"
-                        android:layout_width="46dp"
-                        android:layout_height="46dp"
-                        android:layout_centerInParent="true"
-                        app:cpb_background_progressbar_color="#8BC4FF"
-                        app:cpb_background_progressbar_width="5dp"
-                        app:cpb_progress="45"
-                        app:cpb_progress_direction="to_right"
-                        app:cpb_progressbar_color="#001F3F"
-                        app:cpb_progressbar_width="4dp"
-                        app:cpb_round_border="true" />
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/miles_widget_icon"
-                        android:layout_centerInParent="true"/>
-                </RelativeLayout>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="1.56"
-                    android:textSize="16sp"
-                    android:textColor="#001F3F"
-                    android:fontFamily="@font/comfortaa"
-                    android:layout_marginTop="3dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Miles"
-                    android:textSize="11sp"
-                    android:fontFamily="@font/comfortaa"/>
-            </LinearLayout>
-        </RelativeLayout>
-
-        <LinearLayout
-            android:id="@+id/llItemContainer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="10dp"
-            app:layout_constraintTop_toBottomOf="@id/homeWidgetContainer">
-        </LinearLayout>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</LinearLayout>
